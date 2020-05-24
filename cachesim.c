@@ -235,7 +235,7 @@ int main (int argc, char* argv[]) {
 	int numSets, numBlocks, cacheSizePower, associativityPower, blockSizePower;
 	int tagBits, setIndexBits, offsetBits;
 
-	// Determine N where 2^N, needed since we cannot use powers function
+	// Determine N where 2^N, needed since we cannot use log function
 	cacheSizePower = log2(cacheSize) + 10;
 	associativityPower = log2(associativity);
 	blockSizePower = log2(blockSize);
