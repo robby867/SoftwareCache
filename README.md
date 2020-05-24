@@ -1,7 +1,7 @@
 # SoftwareCache
 
 ## This Program
-This program is a software implementation of a single level write-back and write-allocate cache with 24 bit addresses. Users can specify cache size, block size, and associativity of the cache. Using a trace file of commands, the program will output if it is a hit or a miss, and the value to be loaded if the command is a load.
+This program is a software implementation of a single level write-back and write-allocate cache with 24-bit addresses. Users can specify cache size, block size, and associativity of the cache. Using a trace file of commands, the program will output if it is a hit or a miss, and the value to be loaded if the command is a load.
 
 ## Set up
 In order to compile the C code, you need a C compiler program. I used the GNU Compiler Collection (GCC) from [here](https://gcc.gnu.org/). Once installed, the program can be compiled by running 
@@ -10,7 +10,7 @@ gcc -o cachesim cachesim.c
 ```
 
 ## Running the program
-The program takes in 4 input arguements in the following format:
+The program takes in 4 input arguments in the following format:
 
 ./cachesim \<trace-file\> \<cache-size-kB\> \<associativity\> \<block-size\>
 
@@ -20,7 +20,7 @@ All numbers are in decimal format
 
 \<cache-size-kB\>: Total capacity of the cache in kB. Must be a power of 2 between 2 and 2048.
 
-\<associativty\>: The set associativity. Must be a power of 2.
+\<associativity\>: The set associativity. Must be a power of 2.
 
 \<block-size\>: The size of the cache blocks in Bytes. Must be a power of 2 between 2 and 512.
 
@@ -31,7 +31,7 @@ size cannot be larger than 64B, and no access can be larger than the block size 
 No cache access can span multiple blocks.
 
 ## Trace File Format
-The trace file will specify a single load or store on each line, the 24 bit address (hex), the size of the access in decimal, and the value to be written if it is a store (hex). For example, here is example.txt:
+The trace file will specify a single load or store on each line, the 24-bit address (hex), the size of the access in decimal, and the value to be written if it is a store (hex). For example, here is example.txt:
 ```
 store 0xd53170 4 7d2f13ac
 load  0xd53172 1
@@ -56,4 +56,4 @@ store 0x23 miss
 ```
 
 ## Acknowledgements
-This is an adaptation of the cache simulator assignment by Duke Professor Alvin Lebeck. The original assignmnet has students building a program to simulate a cache. This project takes this simulator, and creates an actual software implementation of the simulated cache. Trace files, file io, command line arguemnets, and specifications of the cache were given by Dr. Lebeck. Everything else is original work.
+This is an adaptation of the cache simulator assignment by Duke Professor Alvin Lebeck. The original assignment has students building a program to simulate a cache. This project takes this simulator and creates an actual software implementation of the simulated cache. Trace files, file io, command line arguments, and specifications of the cache were given by Dr. Lebeck. Everything else is original work.
