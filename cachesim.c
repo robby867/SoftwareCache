@@ -44,6 +44,21 @@ void init(int associativity, int numSets){
 	}
 }
 
+// Deallocate memory, cache, and file
+void deallocate(int numSets){
+	// Deallocate Cache
+	for(int i=0; i < numSets; i++){
+		free(Cache[i]);
+	}
+	free(Cache);
+
+	// Deallocate Memory
+	free(Memory);
+
+	// Deallocate File
+	free(myFile);
+}
+
 // Check for a hit
 int checkHit(int associativity, int setIndex, int tag){
 	int isHit = -1;
@@ -266,5 +281,6 @@ int main (int argc, char* argv[]) {
 		}
 	}
 
+	deallocate(numSets);
 	return EXIT_SUCCESS;
 }
