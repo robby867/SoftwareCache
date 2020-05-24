@@ -56,4 +56,4 @@ store 0x23 miss
 ```
 
 ## Acknowledgements
-This is an adaptation of the cache simulator assignment by Duke Professor Alvin Lebeck. The original assignment has students building a program to simulate a cache. This project takes this simulator and creates an actual software implementation of the simulated cache. Trace files, file io, command line arguments, and specifications of the cache were given by Dr. Lebeck. Everything else is original work.
+This is an adaptation of the Cache Simulator assignment in ECE/CS 250 by Duke Professor Alvin Lebeck. The original assignment has students building a program to simulate a cache. This project takes this simulator and creates an actual software implementation of the simulated cache. Trace files, file io, command line arguments, and specifications of the cache were given by Dr. Lebeck. Everything else is original work.
